@@ -25,9 +25,9 @@ RUN cnpm install --save hexo-generator-index
 RUN cnpm install --save hexo-generator-archive
 RUN cnpm install --save hexo-generator-tag
 
-VOLUME /Hexo/source
-VOLUME /Hexo/themes
-VOLUME /Hexo/scaffolds
+VOLUME ["/Hexo/source"]
+VOLUME ["/Hexo/scaffolds"]
+VOLUME ["/Hexo/scaffolds"]
 VOLUME ["/root/.ssh"]
 
 EXPOSE 80
