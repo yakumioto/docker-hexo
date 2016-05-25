@@ -8,4 +8,18 @@
 
 # 使用方法
 
-待完善。
+看着 **Dockerfile** 的注释进行更改,改完后执行 build
+
+```
+docker build -t docker-hexo:tag .
+```
+
+```
+docker run \
+    -it -p 4000:4000 \
+    --name hexo \
+    -v 你的Hexo/source:/Hexo/source \
+    -v 你的Hexo/themes:/Hexo/themes \
+    -v 你的Hexo/_config.yml:/Hexo/_config.yml \
+    docker-hexo:tag
+```
