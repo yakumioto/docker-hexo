@@ -24,7 +24,7 @@ RUN npm install --save hexo-generator-archive
 RUN npm install --save hexo-generator-tag
 
 VOLUME ["/Hexo/source"]
-VOLUME ["/Hexo/scaffolds"]
+VOLUME ["/Hexo/themes"]
 VOLUME ["/Hexo/scaffolds"]
 VOLUME ["/root/.ssh"]
 
