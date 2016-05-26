@@ -15,11 +15,11 @@ RUN \
 WORKDIR /Hexo
 
 RUN \
-    npm install hexo-cli -g \
-    hexo init . \
-    npm install \
-    npm install hexo-generator-sitemap --save \
-    npm install hexo-generator-feed --save \
+    npm install hexo-cli -g && \
+    hexo init . && \
+    npm install && \
+    npm install hexo-generator-sitemap --save && \
+    npm install hexo-generator-feed --save && \
     npm install hexo-deployer-git --save
 
 VOLUME ["/Hexo/source", "/Hexo/themes", "/Hexo/scaffolds", "/root/.ssh"]
