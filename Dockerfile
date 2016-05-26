@@ -9,13 +9,13 @@ RUN \
     curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && \
     apt-get install -y nodejs && \
     npm install npm -g && \
+    npm install hexo-cli -g
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /Hexo
 
 RUN \
-    npm install hexo-cli -g
     hexo init . && npm install
     npm install hexo-generator-sitemap --save
     npm install hexo-generator-feed --save
