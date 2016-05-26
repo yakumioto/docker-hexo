@@ -14,22 +14,17 @@ RUN \
 
 WORKDIR /Hexo
 
-RUN npm install hexo-cli -g
-RUN hexo init . && npm install
-RUN npm install hexo-generator-sitemap --save
-RUN npm install hexo-generator-feed --save
-RUN npm install hexo-deployer-git --save
-RUN npm install --save hexo-generator-index
-RUN npm install --save hexo-generator-archive
-RUN npm install --save hexo-generator-tag
+RUN \
+    npm install hexo-cli -g && \
+    hexo init . && \
+    npm install && \
+    npm install hexo-generator-sitemap --save && \
+    npm install hexo-generator-feed --save && \
+    npm install hexo-deployer-git --save
 
-VOLUME ["/Hexo/source"]
-VOLUME ["/Hexo/themes"]
-VOLUME ["/Hexo/scaffolds"]
-VOLUME ["/root/.ssh"]
+VOLUME ["/Hexo/source", "/Hexo/themes", "/Hexo/scaffolds", "/root/.ssh"]
 
 EXPOSE 80
-EXPOSE 4000
 
 COPY entrypoint.sh /entrypoint.sh
 
