@@ -22,7 +22,7 @@ RUN \
     npm install hexo-generator-feed --save && \
     npm install hexo-deployer-git --save
 
-VOLUME ["/Hexo/source", "/Hexo/themes", "/Hexo/scaffolds", "/root/.ssh"]
+VOLUME ["/Hexo/source", "/Hexo/themes", "/root/.ssh"]
 
 EXPOSE 80
 
