@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER iyannik0215 , <iyannik0215@gmail.com>
+MAINTAINER iyannik0215 , <admin@mashiro.io>
 
 RUN \
     apt-get update && \
