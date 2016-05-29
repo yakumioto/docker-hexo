@@ -24,8 +24,6 @@ docker run -p 4000:80 --name hexo-server -d \
 # 以下4个数据卷是分别关联 **Hexo** 里最重要的文件,
 -v {你的博客文件夹路径}/source:/Hexo/source \
 -v {你的博客文件夹路径}/themes:/Hexo/themes \
-# 如果你的 **scaffolds** 没有更改过 可以省去下面这一行
--v {你的博客文件夹路径}/scaffolds:/Hexo/scaffolds \
 -v {你的博客文件夹路径}/_config.yml:/Hexo/_config.yml \
 
 # 后面需要三个参数, 第一个为 github username, 第二个为 github email, 第三个为运行模式, s 为 **hexo server**
