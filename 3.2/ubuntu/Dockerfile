@@ -26,8 +26,8 @@ VOLUME ["/Hexo/source", "/Hexo/themes", "/root/.ssh"]
 
 EXPOSE 80
 
-COPY entrypoint.sh /entrypoint.sh
+COPY docker-entrypoint.sh /docker-entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
 CMD ['/bin/bash']
