@@ -2,6 +2,9 @@ FROM: alpine
 
 MAINTAINER iyannik0215 , <admin@mashiro.io>
 
-RUN \
-    apk update \
-    && 
+RUN set -ex \
+    && apk add --no-cache --virtual git \
+        bash \
+        curl \
+        nodejs \
+    && npm install npm -g \
