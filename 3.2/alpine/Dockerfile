@@ -7,7 +7,7 @@ RUN set -ex \
         bash \
         curl \
         nodejs \
-    && npm install npm -g \
+    && npm install npm -g
 
 
 CMD ["/bin/bash"]
