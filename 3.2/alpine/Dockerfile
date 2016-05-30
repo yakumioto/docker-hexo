@@ -1,4 +1,4 @@
-FROM: alpine
+FROM: alpine:latest
 
 MAINTAINER iyannik0215 , <admin@mashiro.io>
 
@@ -8,3 +8,6 @@ RUN set -ex \
         curl \
         nodejs \
     && npm install npm -g \
+
+
+CMD ["/bin/bash"]
