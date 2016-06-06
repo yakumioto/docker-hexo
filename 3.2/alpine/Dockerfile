@@ -5,7 +5,8 @@ MAINTAINER iyannik0215 , <admin@mashiro.io>
 WORKDIR /Hexo
 
 RUN \
-    npm install hexo-cli -g \
+    apk add --no-cache --virtual git \
+    && npm install hexo-cli -g \
     && hexo init . \
     && npm install \
     && npm install hexo-generator-sitemap --save \
@@ -20,4 +21,4 @@ COPY docker-entrypoint.sh /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-CMD ['/bin/bash']
+CMD ['/bin/sh']
