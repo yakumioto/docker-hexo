@@ -21,4 +21,4 @@ COPY docker-entrypoint.sh /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-CMD ['/bin/sh']
+CMD ['/bin/bash']
