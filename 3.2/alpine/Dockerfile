@@ -5,7 +5,9 @@ MAINTAINER iyannik0215 , <admin@mashiro.io>
 WORKDIR /Hexo
 
 RUN \
-    apk add --no-cache --virtual git openssh \
+    apk update \
+    && add --no-cache --virtual git \
+    && openssh \
     && npm install hexo-cli -g \
     && hexo init . \
     && npm install \
