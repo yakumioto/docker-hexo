@@ -2,13 +2,13 @@ FROM mhart/alpine-node:6
 
 MAINTAINER iyannik0215 , <admin@mashiro.io>
 
+RUN \
+    apk add --no-cache --virtual git openssh
+
 WORKDIR /Hexo
 
 RUN \
-    apk update \
-    && add --no-cache --virtual git \
-    && openssh \
-    && npm install hexo-cli -g \
+    npm install hexo-cli -g \
     && hexo init . \
     && npm install \
     && npm install hexo-generator-sitemap --save \
