@@ -8,6 +8,7 @@ RUN \
 WORKDIR /Hexo
 
 RUN \
-    npm install hexo-cli -g
+    npm install hexo-cli -g \
+    && npm install -g cnpm
 
 CMD ['/bin/bash']
